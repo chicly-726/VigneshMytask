@@ -15,6 +15,7 @@ class MyTest extends \Codeception\Test\Unit
     }
 
     // tests
+
     public function testExpiredMembership()
     {
         require_once dirname(dirname(dirname(__FILE__))).'/Access_Controller.php';
