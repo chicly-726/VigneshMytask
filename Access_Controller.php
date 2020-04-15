@@ -2,18 +2,18 @@
 require_once "Collection_Class.php";
 require_once "Data_Info.php";
 
-	$objAccesscrl=new Access_Controller();
-	$state = array("current_date"=> "03/18/2020", "current_page" =>"1137", "current_user" => "13");
-	//$primary_data = array("Userinfo"=>(new UserInfo(2, "vignesh","admin",new User_Memberships("junior_physics","12/03/2020"))), "Memberships"=>array((new Memberships("junior_physics","1 Year",array("1"=>"Introduction To Physics","2"=>"Newtonian Physics","3"=>"Laws of Motion")))),"Pages" => array(new Pages("category_id","1212")));
-	$flag=$objAccesscrl->getaccess_controller($state);
-	if($flag)
-	{
-		echo "<br>True";
-	}
-	else
-	{
-		echo "<br>False";
-	}
+	// $objAccesscrl=new Access_Controller();
+	// $state = array("current_date"=> "03/18/2020", "current_page" =>"1137", "current_user" => "13");
+	// //$primary_data = array("Userinfo"=>(new UserInfo(2, "vignesh","admin",new User_Memberships("junior_physics","12/03/2020"))), "Memberships"=>array((new Memberships("junior_physics","1 Year",array("1"=>"Introduction To Physics","2"=>"Newtonian Physics","3"=>"Laws of Motion")))),"Pages" => array(new Pages("category_id","1212")));
+	// $flag=$objAccesscrl->getaccess_controller($state);
+	// if($flag)
+	// {
+	// 	echo "<br>True";
+	// }
+	// else
+	// {
+	// 	echo "<br>False";
+	// }
 class Access_Controller
 {
 public function getaccess_controller($state,$primary_data=null)
@@ -52,22 +52,22 @@ public function getaccess_controller($state,$primary_data=null)
 							}
 							else
 							{
-								echo "<br>Current Page Not avalibale<br>";
+								// echo "<br>Current Page Not avalibale<br>";
 								return false;
 							}
 					}
 					else
 					{
-						echo "<br>Please activate Memberships<br>";
+						// echo "<br>Please activate Memberships<br>";
 						return false;
 					}	
 			}else{
-				echo "Memberships categories not avalibale";
+				// echo "Memberships categories not avalibale";
 			}			
 				break;
 			}
 	}else{
-			echo "Current User Not avalibale Please Register.";
+			// echo "Current User Not avalibale Please Register.";
 		return false;
 	}
 }
@@ -86,7 +86,7 @@ private function page_category_daywise_Show($allowed_categories,$activationDate,
 							
 							if($count<$getdaysvalues)
 							{
-								echo $values."<br>";
+								// echo $values."<br>";
 							}
 							if($key==$pageCateg)
 							{
@@ -97,7 +97,7 @@ private function page_category_daywise_Show($allowed_categories,$activationDate,
 						}
 				if(!$keyFlag)	
 				{
-							echo "<br>Memberships categorid Not avalibale<br>";
+							// echo "<br>Memberships categorid Not avalibale<br>";
 							return false;
 				}
 }
