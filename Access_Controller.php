@@ -47,8 +47,10 @@ public function getaccess_controller($state,$primary_data=null)
 							if($pageValue!="Invalid")
 							{
 								$pageCateg=$pageValue->getPage_categ();					
-								$this->page_category_daywise_Show($allowed_categories,$state['current_date'],$pageCateg);
+								if($this->page_category_daywise_Show($allowed_categories,$state['current_date'],$pageCateg))
 								return true;
+								else 
+									return false;
 							}
 							else
 							{
@@ -99,7 +101,10 @@ private function page_category_daywise_Show($allowed_categories,$activationDate,
 				{
 							// echo "<br>Memberships categorid Not avalibale<br>";
 							return false;
+				}else{
+					return true;
 				}
+					
 }
 private function calculateDuration($getdurtn,$compDuration)
 {	
